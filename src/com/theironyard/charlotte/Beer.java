@@ -5,8 +5,11 @@ package com.theironyard.charlotte;
  */
 public class Beer extends InventoryItem {
     public Beer(String name, int quantity) {
-        this.name = name;
-        this.quantity = quantity;
-        this.category = "Beer";
+        super (name, quantity);
+        this.category = "beer";
     }
+
+
+
+
 }

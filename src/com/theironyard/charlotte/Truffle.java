@@ -5,8 +5,7 @@ package com.theironyard.charlotte;
  */
 public class Truffle extends InventoryItem {
     public Truffle(String name, int quantity) {
-        this.name = name;
-        this.quantity = quantity;
-        this.category = "Truffle";
+        super (name, quantity);
+        this.category = "truffle";
     }
 }

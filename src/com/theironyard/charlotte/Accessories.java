@@ -5,8 +5,9 @@ package com.theironyard.charlotte;
  */
 public class Accessories extends InventoryItem {
     public Accessories(String name, int quantity) {
-        this.name = name;
-        this.quantity = quantity;
-        this.category = "Accessories";
+        super (name, quantity);
+        this.category = "accessories";
+        // do i need to set field category within each class?
     }
+
 }

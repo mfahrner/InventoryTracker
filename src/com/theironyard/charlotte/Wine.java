@@ -5,8 +5,7 @@ package com.theironyard.charlotte;
  */
 public class Wine extends InventoryItem {
     public Wine(String name, int quantity) {
-        this.name = name;
-        this.quantity = quantity;
-        this.category = "Wine";
+        super (name, quantity);
+        this.category = "wine";
     }
 }

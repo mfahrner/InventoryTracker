@@ -5,8 +5,7 @@ package com.theironyard.charlotte;
  */
 public class Spirit extends InventoryItem {
     public Spirit(String name, int quantity) {
-        this.name = name;
-        this.quantity = quantity;
-        this.category = "Spirit";
+        super (name, quantity);
+        this.category = "spirit";
     }
 }
