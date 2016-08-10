@@ -13,8 +13,12 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-
         while(true) {
+
+            for (int i = 0; i < inventory.size(); i++) {
+                System.out.println(inventory.get(i));
+            }
+
             System.out.println("1. Create new item");
             System.out.println("2. Remove an item");
             System.out.println("3. Update an item's quantity");
@@ -49,12 +53,20 @@ public class Main {
 
             } else if (option.equals("3")) {
                 //code for update quantity
-                System.out.println("option 3 works");
-            }
+                System.out.println("Which item would you like to update?");
 
+                String updateItem = scanner.nextLine();
+                int updateItemInt = Integer.parseInt(updateItem);
 
-            for (int i = 0; i < inventory.size(); i++) {
-                System.out.println(inventory.get(i));
+                System.out.println("What is the correct inventory?");
+
+                String updateQuant = scanner.nextLine();
+                int updateQuantity = Integer.parseInt(updateQuant);
+
+                InventoryItem quantityChange = inventory.get(updateItemInt);
+
+                quantityChange.setQuantity(updateQuantity);
+
             }
 
         }

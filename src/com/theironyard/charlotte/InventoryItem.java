@@ -8,12 +8,6 @@ public class InventoryItem {
     int quantity;
     String category;
 
-    public InventoryItem(String name, int quantity) {
-        name = name;
-        quantity = quantity;
-
-    }
-
     public static InventoryItem createItem(String name, int quantity, String category) throws Exception {
         if (category.equals("accessories")) {
             return new Accessories(name, quantity);
@@ -29,9 +23,22 @@ public class InventoryItem {
             throw new Exception("Invalid category");
     }
 
+    public InventoryItem(String name, int quantity) {
+        this.name = name;
+        this.quantity = quantity;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     @Override
     public String toString() {
-        return "[" + this.quantity + "]" + this.name + this.category;
+        return "[" + this.quantity + "]" + this.name + " " + this.category;
     }
 
 }
