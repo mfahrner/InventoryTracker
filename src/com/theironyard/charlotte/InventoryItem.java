@@ -38,7 +38,7 @@ public class InventoryItem {
 
     @Override
     public String toString() {
-        return "[" + this.quantity + "]" + this.name + " " + this.category;
+        return String.format("[%s] %s %s",  this.quantity, this.name, this.category);
     }
 
 }
